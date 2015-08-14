@@ -1,0 +1,7 @@
+base   stratatimetypes
+author Brend Wanders
+email  b.wanders@utwente.nl
+date   2015-08-14
+name   Strata Time Types
+desc   Time related data types for Strata
+url    http://github.com/bwanders/dokuwiki-plugin-stratatimetypes
