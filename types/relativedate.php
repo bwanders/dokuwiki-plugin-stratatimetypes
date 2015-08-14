@@ -7,7 +7,7 @@
 if(!defined('DOKU_INC')) die('Meh.');
 
 /**
- * The date type.
+ * The relativedate type.
  */
 class plugin_strata_type_relativedate extends plugin_strata_type {
     function relative_time($time, $basis=null) {
@@ -83,9 +83,9 @@ class plugin_strata_type_relativedate extends plugin_strata_type {
         
     function getInfo() {
         return array(
-            'desc'=>'FIXME',
+            'desc'=>'Displays time difference relative to the current time. When used as input type, it understands relative times like \'now +7 days\'.',
             'tags'=>array('numeric'),
-            'hint'=>'FIXME'
+            'hint'=>'The type hint is ignored.'
         );
     }
 }
