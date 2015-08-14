@@ -22,13 +22,12 @@ class plugin_strata_type_relativedate extends plugin_strata_type {
         );
 
         if($basis == null) $basis = time();
-        $result = array();
 
         $delta = $basis - $time;
         $future = ($delta < 0);
         $delta = abs($delta);
 
-        if($delta < 30) {
+        if($delta < 10) {
             return $future ? 'momentarily' : 'just now';
         }
 
@@ -51,15 +50,14 @@ class plugin_strata_type_relativedate extends plugin_strata_type {
         if($mode == 'xhtml') {
             if(is_numeric($value)) {
                 // convert
-                $description = $this->relative_time((int)$value);
+                $basis = time();
+                $description = $this->relative_time((int)$value, $basis);
 
                 // produce exact date
-                $date = new DateTime();
-                $date->setTimestamp((int)$value);
-                $exact = $date->format('c');
+                $exact = date('c', $value);
 
                 // render
-                $R->doc .= '<span class="stratatimetypes-relativedate" data-time="'.$exact.'">';
+                $R->doc .= '<span class="stratatimetypes-relative" data-time="'.$exact.'">';
                 $R->doc .= $R->_xmlEntities($description);
                 $R->doc .= '</span>';
             } else {
