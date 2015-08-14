@@ -84,8 +84,7 @@ class plugin_strata_type_relativedate extends plugin_strata_type {
     function getInfo() {
         return array(
             'desc'=>'Displays time difference relative to the current time. When used as input type, it understands relative times like \'now +7 days\'.',
-            'tags'=>array('numeric'),
-            'hint'=>'The type hint is ignored.'
+            'tags'=>array('numeric')
         );
     }
 }
