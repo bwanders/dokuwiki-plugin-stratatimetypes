@@ -54,5 +54,5 @@ jQuery(function() {
         });
     }
 
-    setInterval(update_relative_times, 1000);
+    setInterval(update_relative_times, 5000);
 });
