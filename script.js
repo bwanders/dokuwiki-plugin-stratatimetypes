@@ -1,5 +1,3 @@
-BREND = null;
-
 jQuery(function() {
     function relative_time(time, basis) {
         var scales = [
