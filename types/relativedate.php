@@ -38,7 +38,7 @@ class plugin_strata_type_relativedate extends plugin_strata_type {
             } elseif ($delta == 1) {
                 return $future ? "in 1 $scale" : "1 $scale ago";
             } elseif ($delta < $factor) {
-                return $future ? "in $delta ${scale}s" : "$delta ${sacle}s ago";
+                return $future ? "in $delta ${scale}s" : "$delta ${scale}s ago";
             } else {
                 $delta = (int)($delta / $factor);
             }
