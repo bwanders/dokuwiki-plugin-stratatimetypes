@@ -1,6 +1,8 @@
 Strata Time Types
 =================
 
+__This dokuwiki plugin is no longer maintained. Due to time constraints and no longer using this plugin myself, I can no longer properly maintain it.__
+
 This plugin provides additional date and time types for the [Strata](https://github.com/bwanders/dokuwiki-strata) dokuwiki plugin.
 
 At the moment, this plugin only provides the `relativedate` type.
